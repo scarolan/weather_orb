@@ -21,8 +21,8 @@ case "$1" in
     ;;
     stop)
         echo "Stopping Orb"
-        LCD_PID=`ps auxwww | grep orb_listener.py | head -1 | awk '{print $2}'`
-        kill -9 $LCD_PID
+	LCD_PID=`ps auxwww | grep orb_listener.py | head -1 | awk '{print $2}'`
+	kill -9 $LCD_PID
     ;;
     *)
         echo "Usage: /etc/init.d/orb_listener {start|stop}"

@@ -147,9 +147,8 @@ def weather(interval):
         sleep(1)
         # First fetch current weather from the NOAA feed
         noaa = pywapi.get_weather_from_noaa('KATT')
-        #print noaa
         conditions1 = noaa['weather']
-        conditions2 = noaa['temp_f']+'F '+noaa['pressure_in']+' '+noaa['relative_humidity']+'%'
+        conditions2 = noaa['temp_f']+'F '+noaa['pressure_mb']+' '+noaa['relative_humidity']+'%'
         printLCD(conditions1,conditions2)
         # Now we set up the blinkM script
         blinkMStop()

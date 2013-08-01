@@ -17,7 +17,7 @@ gpio.setup(MODEPIN, gpio.IN)
 killcmd="kill -9 $(ps auxwww | grep orb.py | head -1 | awk '{ print $2 }')"
 orbscript='/usr/local/bin/orb.py'
 
-currmode = 2
+currmode = 0
 while True:
     if gpio.input(MODEPIN) == False:
         if currmode < len(MODES) - 1:
